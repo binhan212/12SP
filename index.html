@@ -1,487 +1,996 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechViet Solutions - Giải Pháp Phần Mềm Hàng Đầu</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VNPT SOLUTION - Giải Pháp Phần Mềm Hàng Đầu</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hover-scale { transition: transform 0.3s ease; }
-        .hover-scale:hover { transform: translateY(-5px); }
-        .hero-pattern { background-color: #667eea; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v6h6V4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: translateY(-5px);
+      }
+      .hero-pattern {
+        background-color: #667eea;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v6h6V4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
     </style>
-</head>
-<body class="bg-gray-50">
+  </head>
+  <body class="bg-gray-50">
     <!-- Navigation -->
     <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <i class="fas fa-microchip text-3xl text-purple-600"></i>
-                    <span class="ml-2 text-2xl font-bold gradient-text">VNPT SOLUTION</span>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600 font-medium transition">Trang chủ</a>
-                    <a href="#products" class="nav-link text-gray-700 hover:text-purple-600 font-medium transition">Sản phẩm</a>
-                    <a href="#about" class="nav-link text-gray-700 hover:text-purple-600 font-medium transition">Về chúng tôi</a>
-                    <a href="#blog" class="nav-link text-gray-700 hover:text-purple-600 font-medium transition">Blog</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 font-medium transition">Liên hệ</a>
-                </div>
-                <button class="md:hidden text-gray-700" id="mobileMenuBtn">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <i class="fas fa-microchip text-3xl text-purple-600"></i>
+            <span class="ml-2 text-2xl font-bold gradient-text"
+              >VNPT SOLUTION</span
+            >
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="nav-link text-gray-700 hover:text-purple-600 font-medium transition"
+              >Trang chủ</a
+            >
+            <a
+              href="#products"
+              class="nav-link text-gray-700 hover:text-purple-600 font-medium transition"
+              >Sản phẩm</a
+            >
+            <a
+              href="#about"
+              class="nav-link text-gray-700 hover:text-purple-600 font-medium transition"
+              >Về chúng tôi</a
+            >
+            <a
+              href="#blog"
+              class="nav-link text-gray-700 hover:text-purple-600 font-medium transition"
+              >Blog</a
+            >
+            <a
+              href="#contact"
+              class="nav-link text-gray-700 hover:text-purple-600 font-medium transition"
+              >Liên hệ</a
+            >
+          </div>
+          <button class="md:hidden text-gray-700" id="mobileMenuBtn">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="px-4 py-3 space-y-3">
-                <a href="#home" class="block text-gray-700 hover:text-purple-600 font-medium">Trang chủ</a>
-                <a href="#products" class="block text-gray-700 hover:text-purple-600 font-medium">Sản phẩm</a>
-                <a href="#about" class="block text-gray-700 hover:text-purple-600 font-medium">Về chúng tôi</a>
-                <a href="#blog" class="block text-gray-700 hover:text-purple-600 font-medium">Blog</a>
-                <a href="#contact" class="block text-gray-700 hover:text-purple-600 font-medium">Liên hệ</a>
-            </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+        <div class="px-4 py-3 space-y-3">
+          <a
+            href="#home"
+            class="block text-gray-700 hover:text-purple-600 font-medium"
+            >Trang chủ</a
+          >
+          <a
+            href="#products"
+            class="block text-gray-700 hover:text-purple-600 font-medium"
+            >Sản phẩm</a
+          >
+          <a
+            href="#about"
+            class="block text-gray-700 hover:text-purple-600 font-medium"
+            >Về chúng tôi</a
+          >
+          <a
+            href="#blog"
+            class="block text-gray-700 hover:text-purple-600 font-medium"
+            >Blog</a
+          >
+          <a
+            href="#contact"
+            class="block text-gray-700 hover:text-purple-600 font-medium"
+            >Liên hệ</a
+          >
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero-pattern pt-24 pb-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="text-white">
-                    <h1 class="text-5xl font-bold mb-6 leading-tight">Giải Pháp Phần Mềm Chuyển Đổi Số</h1>
-                    <p class="text-xl mb-8 text-purple-100">Chúng tôi cung cấp các sản phẩm công nghệ phần mềm tiên tiến, giúp doanh nghiệp tối ưu hóa quy trình và tăng trưởng bền vững.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <button class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="text-white">
+            <h1 class="text-5xl font-bold mb-6 leading-tight">
+              Giải Pháp Phần Mềm Chuyển Đổi Số
+            </h1>
+            <p class="text-xl mb-8 text-purple-100">
+              Chúng tôi cung cấp các sản phẩm công nghệ phần mềm tiên tiến, giúp
+              doanh nghiệp tối ưu hóa quy trình và tăng trưởng bền vững.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <!-- <button class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
                             <i class="fas fa-rocket mr-2"></i>Dùng thử miễn phí
-                        </button>
-                        <button class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition">
-                            <i class="fas fa-phone mr-2"></i>Liên hệ ngay
-                        </button>
-                    </div>
-                </div>
-                <div class="hidden md:block">
-                    <div class="bg-white rounded-2xl shadow-2xl p-8">
-                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800" alt="Team collaboration" class="rounded-lg mb-4">
-                        <div class="grid grid-cols-3 gap-4 text-center">
-                            <div class="bg-purple-50 p-4 rounded-lg">
-                                <div class="text-3xl font-bold text-purple-600">500+</div>
-                                <div class="text-gray-600 text-sm">Khách hàng</div>
-                            </div>
-                            <div class="bg-purple-50 p-4 rounded-lg">
-                                <div class="text-3xl font-bold text-purple-600">15+</div>
-                                <div class="text-gray-600 text-sm">Sản phẩm</div>
-                            </div>
-                            <div class="bg-purple-50 p-4 rounded-lg">
-                                <div class="text-3xl font-bold text-purple-600">99%</div>
-                                <div class="text-gray-600 text-sm">Hài lòng</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        </button> -->
+              <button
+                class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition"
+              >
+                <a href="#contact">
+                  <i class="fas fa-phone mr-2"></i>Liên hệ ngay</a
+                >
+              </button>
             </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="bg-white rounded-2xl shadow-2xl p-8">
+              <img
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800"
+                alt="Team collaboration"
+                class="rounded-lg mb-4"
+              />
+              <div class="grid grid-cols-3 gap-4 text-center">
+                <div class="bg-purple-50 p-4 rounded-lg">
+                  <div class="text-3xl font-bold text-purple-600">500+</div>
+                  <div class="text-gray-600 text-sm">Khách hàng</div>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg">
+                  <div class="text-3xl font-bold text-purple-600">15+</div>
+                  <div class="text-gray-600 text-sm">Sản phẩm</div>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg">
+                  <div class="text-3xl font-bold text-purple-600">99%</div>
+                  <div class="text-gray-600 text-sm">Hài lòng</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Products Section -->
     <section id="products" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Sản Phẩm Nổi Bật</h2>
-                <p class="text-xl text-gray-600">Khám phá các giải pháp phần mềm hàng đầu của chúng tôi</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8" id="productsGrid">
-                <!-- Products will be loaded here -->
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Sản Phẩm Nổi Bật
+          </h2>
+          <p class="text-xl text-gray-600">
+            Khám phá các giải pháp phần mềm hàng đầu của chúng tôi
+          </p>
+        </div>
 
-            <div class="text-center mt-12">
+        <div class="grid md:grid-cols-3 gap-8" id="productsGrid"></div>
+
+        <!-- <div class="text-center mt-12">
                 <button class="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
                     Xem tất cả sản phẩm <i class="fas fa-arrow-right ml-2"></i>
                 </button>
-            </div>
-        </div>
+            </div> -->
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800" alt="Team" class="rounded-2xl shadow-xl">
-                </div>
-                <div>
-                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Về Trung Tâm Kinh Doanh Giải Pháp VNPT</h2>
-                    <p class="text-lg text-gray-700 mb-6">Chúng tôi là đơn vị tiên phong trong việc phát triển các giải pháp phần mềm công nghệ cao: </p>
-                    
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 text-2xl mr-4 mt-1"></i>
-                            <div>
-                                <h3 class="font-semibold text-lg mb-1">Sứ mệnh</h3>
-                                <p class="text-gray-600">Tạo ra các sản phẩm công nghệ giúp doanh nghiệp chuyển đổi số thành công.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 text-2xl mr-4 mt-1"></i>
-                            <div>
-                                <h3 class="font-semibold text-lg mb-1">Tầm nhìn</h3>
-                                <p class="text-gray-600">Trở thành nhà cung cấp giải pháp phần mềm hàng đầu Lào Cai vào năm 2030.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 text-2xl mr-4 mt-1"></i>
-                            <div>
-                                <h3 class="font-semibold text-lg mb-1">Giá trị cốt lõi</h3>
-                                <p class="text-gray-600">Đổi mới, Chất lượng, Khách hàng là trung tâm, Hợp tác và Phát triển bền vững.</p>
-                            </div>
-                        </div>
-                    </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800"
+              alt="Team"
+              class="rounded-2xl shadow-xl"
+            />
+          </div>
+          <div>
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">
+              Về Trung Tâm Kinh Doanh Giải Pháp VNPT
+            </h2>
+            <p class="text-lg text-gray-700 mb-6">
+              Chúng tôi là đơn vị tiên phong trong việc phát triển các giải pháp
+              phần mềm công nghệ cao:
+            </p>
 
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                            <i class="fas fa-award text-4xl text-purple-600 mb-3"></i>
-                            <h4 class="font-bold text-lg">ISO 9001:2015</h4>
-                            <p class="text-gray-600 text-sm">Chứng nhận quốc tế</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                            <i class="fas fa-users text-4xl text-purple-600 mb-3"></i>
-                            <h4 class="font-bold text-lg">46+ Chuyên gia</h4>
-                            <p class="text-gray-600 text-sm">Đội ngũ kỹ thuật</p>
-                        </div>
-                    </div>
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start">
+                <i
+                  class="fas fa-check-circle text-green-500 text-2xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h3 class="font-semibold text-lg mb-1">Sứ mệnh</h3>
+                  <p class="text-gray-600">
+                    Tạo ra các sản phẩm công nghệ giúp doanh nghiệp chuyển đổi
+                    số thành công.
+                  </p>
                 </div>
+              </div>
+              <div class="flex items-start">
+                <i
+                  class="fas fa-check-circle text-green-500 text-2xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h3 class="font-semibold text-lg mb-1">Tầm nhìn</h3>
+                  <p class="text-gray-600">
+                    Trở thành nhà cung cấp giải pháp phần mềm hàng đầu Lào Cai
+                    vào năm 2030.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i
+                  class="fas fa-check-circle text-green-500 text-2xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h3 class="font-semibold text-lg mb-1">Giá trị cốt lõi</h3>
+                  <p class="text-gray-600">
+                    Đổi mới, Chất lượng, Khách hàng là trung tâm, Hợp tác và
+                    Phát triển bền vững.
+                  </p>
+                </div>
+              </div>
             </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <i class="fas fa-award text-4xl text-purple-600 mb-3"></i>
+                <h4 class="font-bold text-lg">ISO 9001:2015</h4>
+                <p class="text-gray-600 text-sm">Chứng nhận quốc tế</p>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <i class="fas fa-users text-4xl text-purple-600 mb-3"></i>
+                <h4 class="font-bold text-lg">46+ Chuyên gia</h4>
+                <p class="text-gray-600 text-sm">Đội ngũ kỹ thuật</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Blog Section -->
     <section id="blog" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Tin Tức & Blog</h2>
-                <p class="text-xl text-gray-600">Cập nhật xu hướng công nghệ và kiến thức mới nhất</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8" id="blogGrid">
-                <!-- Blog posts will be loaded here -->
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Tin Tức & Blog</h2>
+          <p class="text-xl text-gray-600">
+            Cập nhật xu hướng công nghệ và kiến thức mới nhất
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-8" id="blogGrid"></div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Liên Hệ Với Chúng Tôi</h2>
-                <p class="text-xl text-gray-600">Để lại thông tin, chúng tôi sẽ liên hệ lại trong 24h</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <form class="bg-white p-8 rounded-2xl shadow-lg">
-                        <div class="mb-6">
-                            <label class="block text-gray-700 font-semibold mb-2">Họ và tên *</label>
-                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Nguyễn Văn A">
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-gray-700 font-semibold mb-2">Email *</label>
-                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="email@example.com">
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-gray-700 font-semibold mb-2">Số điện thoại *</label>
-                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="0912345678">
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-gray-700 font-semibold mb-2">Tin nhắn</label>
-                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Nội dung cần tư vấn..."></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
-                            <i class="fas fa-paper-plane mr-2"></i>Gửi yêu cầu
-                        </button>
-                    </form>
-                </div>
-                
-                <div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg mb-6">
-                        <h3 class="text-2xl font-bold mb-6">Thông tin liên hệ</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-start">
-                                <i class="fas fa-map-marker-alt text-purple-600 text-xl mr-4 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold mb-1">Địa chỉ</h4>
-                                    <p class="text-gray-600">Số 15, đường Đinh Tiên Hoàng, Phường Yên Bái Tỉnh Lào Cai</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-phone text-purple-600 text-xl mr-4 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold mb-1">Điện thoại</h4>
-                                    <p class="text-gray-600">Hotline: 1900 1234</p>
-                                    <p class="text-gray-600">Tel: (028) 3822 5678</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-envelope text-purple-600 text-xl mr-4 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold mb-1">Email</h4>
-                                    <p class="text-gray-600">chuabiet.vn</p>
-                                    <p class="text-gray-600">chuaco.vn</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-clock text-purple-600 text-xl mr-4 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold mb-1">Giờ làm việc</h4>
-                                    <p class="text-gray-600">Thứ 2 - Thứ 6: 8:00 - 18:00</p>
-                                    <p class="text-gray-600">Thứ 7: 8:00 - 12:00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-8 rounded-2xl shadow-lg text-white">
-                        <h3 class="text-2xl font-bold mb-4">Kết nối với chúng tôi</h3>
-                        <div class="flex space-x-4">
-                            <a href="#" class="bg-white text-purple-600 w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition">
-                                <i class="fab fa-facebook-f text-xl"></i>
-                            </a>
-                            <a href="#" class="bg-white text-purple-600 w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition">
-                                <i class="fab fa-linkedin-in text-xl"></i>
-                            </a>
-                            <a href="#" class="bg-white text-purple-600 w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition">
-                                <i class="fab fa-youtube text-xl"></i>
-                            </a>
-                            <a href="#" class="bg-white text-purple-600 w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition">
-                                <i class="fab fa-twitter text-xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Liên Hệ</h2>
+          <p class="text-xl text-gray-600">
+            Để lại thông tin, VNPT sẽ liên hệ lại bạn trong 24h
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <form
+              action="https://formspree.io/f/xovyeadg"
+              method="POST"
+              class="bg-white p-8 rounded-2xl shadow-lg"
+              novalidate
+            >
+              <div class="mb-6">
+                <label class="block text-gray-700 font-semibold mb-2" for="name"
+                  >Họ và tên <span class="text-red-500">*</span></label
+                >
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                  placeholder="Nguyễn Văn A"
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="mb-6">
+                <label
+                  class="block text-gray-700 font-semibold mb-2"
+                  for="address"
+                  >Đơn vị làm việc <span class="text-red-500">*</span></label
+                >
+                <input
+                  id="address"
+                  name="address"
+                  type="text"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                  placeholder="TTHCC xã, phường,.."
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="mb-6">
+                <label
+                  class="block text-gray-700 font-semibold mb-2"
+                  for="phone"
+                  >Số điện thoại <span class="text-red-500">*</span></label
+                >
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  pattern="^[0-9+\-\s()]{7,}$"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                  placeholder="0886336977"
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="mb-6">
+                <label
+                  class="block text-gray-700 font-semibold mb-2"
+                  for="message"
+                  >Tin nhắn</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                  placeholder="Sản phẩm cần tư vấn/đặt hàng..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition"
+              >
+                <i class="fas fa-paper-plane mr-2"></i>Gửi yêu cầu
+              </button>
+            </form>
+          </div>
+
+          <div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg mb-6">
+              <h3 class="text-2xl font-bold mb-6">Thông tin liên hệ</h3>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <i
+                    class="fas fa-map-marker-alt text-purple-600 text-xl mr-4 mt-1"
+                  ></i>
+                  <div>
+                    <h4 class="font-semibold mb-1">Địa chỉ</h4>
+                    <p class="text-gray-600">
+                      Số 15, đường Đinh Tiên Hoàng, Phường Yên Bái Tỉnh Lào Cai
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <i class="fas fa-phone text-purple-600 text-xl mr-4 mt-1"></i>
+                  <div>
+                    <h4 class="font-semibold mb-1">Điện thoại</h4>
+                    <p class="text-gray-600">Hotline: 0886336977</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <i
+                    class="fas fa-envelope text-purple-600 text-xl mr-4 mt-1"
+                  ></i>
+                  <div>
+                    <h4 class="font-semibold mb-1">Email</h4>
+                    <p class="text-gray-600">binhanvio@gmail.vn</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <i class="fas fa-clock text-purple-600 text-xl mr-4 mt-1"></i>
+                  <div>
+                    <h4 class="font-semibold mb-1">Giờ làm việc</h4>
+                    <p class="text-gray-600">Thứ 2 - Thứ 6: 8:00 - 18:00</p>
+                    <p class="text-gray-600">Thứ 7: 8:00 - 12:00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-gradient-to-r from-purple-600 to-indigo-600 p-8 rounded-2xl shadow-lg text-white"
+            >
+              <h3 class="text-2xl font-bold mb-4">Kết nối với VNPT</h3>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="bg-white text-purple-600 w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition"
+                >
+                  <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-white text-purple-600 w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition"
+                >
+                  <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-white text-purple-600 w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition"
+                >
+                  <i class="fab fa-youtube text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-white text-purple-600 w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition"
+                >
+                  <i class="fab fa-twitter text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-microchip text-3xl text-purple-400"></i>
-                        <span class="ml-2 text-xl font-bold">VNPT Solutions</span>
-                    </div>
-                    <p class="text-gray-400">Đối tác tin cậy trong hành trình chuyển đổi số của khách hàng.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Sản phẩm</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition">Quản lý doanh nghiệp</a></li>
-                        <li><a href="#" class="hover:text-white transition">Ứng dụng di động</a></li>
-                        <li><a href="#" class="hover:text-white transition">AI & Machine Learning</a></li>
-                        <li><a href="#" class="hover:text-white transition">Cloud Solutions</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Công ty</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#about" class="hover:text-white transition">Về chúng tôi</a></li>
-                        <li><a href="#" class="hover:text-white transition">Tuyển dụng</a></li>
-                        <li><a href="#blog" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="#contact" class="hover:text-white transition">Liên hệ</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Đăng ký nhận tin</h4>
-                    <p class="text-gray-400 mb-4">Cập nhật tin tức và ưu đãi mới nhất</p>
-                    <div class="flex">
-                        <input type="email" placeholder="Email của bạn" class="flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus:outline-none">
-                        <button class="bg-purple-600 px-4 py-2 rounded-r-lg hover:bg-purple-700 transition">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </div>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <div class="flex items-center mb-4">
+              <i class="fas fa-microchip text-3xl text-purple-400"></i>
+              <span class="ml-2 text-xl font-bold">VNPT Solutions</span>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>&copy; VNPT 2025.</p>
+            <p class="text-gray-400">
+              Đối tác tin cậy trong hành trình chuyển đổi số của khách hàng.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Sản phẩm</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="#" class="hover:text-white transition"
+                  >Giải pháp hành chính</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition"
+                  >Ứng dụng phần mềm</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition"
+                  >AI & Mobile App</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition"
+                  >Giải pháp hỗ trợ (giáo dục, người dân, y tế,...)</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Công ty</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="#about" class="hover:text-white transition">Về VNPT</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition">Tuyển dụng</a>
+              </li>
+              <li>
+                <a href="#blog" class="hover:text-white transition">Bài viết</a>
+              </li>
+              <li>
+                <a href="#contact" class="hover:text-white transition"
+                  >Liên hệ</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Cập nhật</h4>
+            <p class="text-gray-400 mb-4">Cập nhật tin tức</p>
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Phần này chưa khả dụng"
+                class="flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus:outline-none"
+              />
+              <button
+                class="bg-purple-600 px-4 py-2 rounded-r-lg hover:bg-purple-700 transition"
+              >
+                <i class="fas fa-paper-plane"></i>
+              </button>
             </div>
+          </div>
         </div>
+        <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+          <p>&copy; VNPT LÀO CAI @2025.</p>
+        </div>
+      </div>
     </footer>
 
     <!-- Product Detail Modal -->
-    <div id="productModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" style="overflow-y: auto;">
-        <div class="bg-white rounded-2xl max-w-4xl w-full my-8 overflow-hidden" style="max-height: 95vh; display: flex; flex-direction: column;">
-            <div class="p-8 flex-shrink-0 border-b border-gray-200">
-                <div class="flex justify-between items-start">
-                    <h2 id="modalTitle" class="text-3xl font-bold text-gray-900"></h2>
-                    <button id="closeModal" class="text-gray-400 hover:text-gray-600 ml-4">
-                        <i class="fas fa-times text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="p-8 overflow-y-auto flex-1">
-                <div id="modalContent"></div>
-            </div>
+    <div
+      id="productModal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+    >
+      <div
+        class="bg-white rounded-2xl max-w-4xl w-full my-8 overflow-hidden"
+        style="max-height: 95vh; display: flex; flex-direction: column"
+      >
+        <div class="p-8 flex-shrink-0 border-b border-gray-200">
+          <div class="flex justify-between items-start">
+            <h2 id="modalTitle" class="text-3xl font-bold text-gray-900"></h2>
+            <button
+              id="closeModal"
+              class="text-gray-400 hover:text-gray-600 ml-4"
+            >
+              <i class="fas fa-times text-2xl"></i>
+            </button>
+          </div>
         </div>
+        <div class="p-8 overflow-y-auto flex-1">
+          <div id="modalContent"></div>
+        </div>
+      </div>
     </div>
 
     <script>
-        // Fake Data
-        const products = [
-            {
-                id: 1,
-                name: "SmartERP Pro",
-                category: "Quản lý doanh nghiệp",
-                icon: "fa-building",
-                description: "Hệ thống ERP toàn diện cho doanh nghiệp vừa và lớn",
-                features: ["Quản lý tài chính", "Quản lý nhân sự", "Quản lý kho", "Báo cáo thông minh"],
-                benefits: "Tối ưu hóa quy trình vận hành, giảm 40% thời gian xử lý, tăng 35% năng suất làm việc",
-                price: "Liên hệ",
-                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600"
-            },
-            {
-                id: 2,
-                name: "MobileFirst Suite",
-                category: "Ứng dụng di động",
-                icon: "fa-mobile-alt",
-                description: "Nền tảng phát triển ứng dụng di động đa nền tảng",
-                features: ["Cross-platform", "UI/UX hiện đại", "Tích hợp API", "Push notification"],
-                benefits: "Phát triển nhanh gấp 3 lần, tiết kiệm 60% chi phí, triển khai đồng thời iOS & Android",
-                price: "Từ 50 triệu VNĐ",
-                image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600"
-            },
-            {
-                id: 3,
-                name: "AI Analytics",
-                category: "AI & Phân tích",
-                icon: "fa-brain",
-                description: "Giải pháp phân tích dữ liệu và dự đoán bằng AI",
-                features: ["Machine Learning", "Dự đoán xu hướng", "Phân tích hành vi", "Dashboard trực quan"],
-                benefits: "Tăng độ chính xác dự đoán 85%, giảm sai sót 70%, ra quyết định nhanh hơn 50%",
-                price: "Từ 80 triệu VNĐ",
-                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600"
-            },
-            {
-                id: 4,
-                name: "CloudSync Pro",
-                category: "Cloud Solutions",
-                icon: "fa-cloud",
-                description: "Giải pháp lưu trữ và đồng bộ dữ liệu đám mây",
-                features: ["Bảo mật cao", "Đồng bộ tự động", "Backup liên tục", "Truy cập mọi lúc"],
-                benefits: "An toàn tuyệt đối, tiết kiệm 50% chi phí hạ tầng, mở rộng linh hoạt",
-                price: "Từ 10 triệu VNĐ/năm",
-                image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600"
-            },
-            {
-                id: 5,
-                name: "CRM Master",
-                category: "Quản lý khách hàng",
-                icon: "fa-users",
-                description: "Hệ thống quản lý quan hệ khách hàng thông minh",
-                features: ["Quản lý leads", "Tự động hóa marketing", "Phân tích khách hàng", "Email marketing"],
-                benefits: "Tăng 45% tỷ lệ chuyển đổi, giữ chân 60% khách hàng, tăng doanh thu 30%",
-                price: "Từ 30 triệu VNĐ",
-                image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600"
-            },
-            {
-                id: 6,
-                name: "SecureGate",
-                category: "Bảo mật",
-                icon: "fa-shield-alt",
-                description: "Giải pháp bảo mật toàn diện cho doanh nghiệp",
-                features: ["Firewall thông minh", "Phát hiện xâm nhập", "Mã hóa dữ liệu", "Quản lý truy cập"],
-                benefits: "Bảo vệ 99.9% khỏi tấn công, tuân thủ tiêu chuẩn quốc tế, giám sát 24/7",
-                price: "Từ 40 triệu VNĐ",
-                image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600"
-            }
-        ];
+      // Fake Data
+      const products = [
+        {
+          id: 1,
+          name: "Điều hành thông minh",
+          category: "Giải pháp hành chính",
+          icon: "fa-building",
+          description:
+            "Hệ thống Điều hành thông minh (IOC - Intelligent Operations Center) là nền tảng tích hợp dữ liệu từ nhiều nguồn khác nhau, cung cấp cái nhìn toàn diện về tình hình kinh tế, xã hội của xã/phường thông qua dashboard trực quan và báo cáo thời gian thực.",
+          features: [
+            "Thu thập và tích hợp dữ liệu từ các hệ thống khác nhau",
+            "Hiển thị dashboard trực quan với các chỉ số KPI quan trọng",
+            "Cảnh báo tự động khi có bất thường",
+            "Tạo báo cáo tự động theo chu kỳ",
+            "Hỗ trợ ra quyết định dựa trên dữ liệu",
+          ],
+          benefits: [
+            "Nâng cao hiệu quả điều hành và quản lý",
+            "Ra quyết định nhanh chóng và chính xác dựa trên dữ liệu thực tế",
+            "Tiết kiệm thời gian thu thập và xử lý thông tin",
+            "Tăng tính minh bạch trong hoạt động quản lý",
+            "Phát hiện sớm các vấn đề để có biện pháp xử lý kịp thời",
+          ],
+          price: "Từ 180 triệu VNĐ",
+          image:
+            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600",
+        },
+        {
+          id: 2,
+          name: "Họp không giấy",
+          category: "Giải pháp hành chính",
+          icon: "fa-mobile-alt",
+          description:
+            "Hệ thống Quản lý tài liệu họp qua các nhiệm kỳ, tra cứu tài liệu, xây dựng cuộc họp, tài liệu họp, nội dung họp phục vụ chuyển đổi số, các cuộc họp sẽ không phải in tài liệu. Xây dựng cơ chế họp trực tuyến.",
+          features: [
+            "Quản lý cuộc họp",
+            "Quản lý chuyên mục",
+            "Quản lý biểu quyết cuộc họp",
+            "Tổ chức họp trực tuyến và xin ý kiến online",
+            "Chia sẻ tài liệu điện tử với cập nhật tức thì",
+          ],
+          benefits: [
+            "Số hóa toàn bộ tài liệu họp, phục vụ lưu trữ và tra cứu nhanh theo nhiệm kỳ, nội dung hoặc cơ quan",
+            "Tổ chức họp không giấy, tài liệu được chia sẻ điện tử, cập nhật tức thì",
+            "Họp trực tuyến, xin ý kiến online, giúp các thành viên tham gia ở mọi nơi",
+            "Giảm chi phí in ấn, tiết kiệm thời gian chuẩn bị và gửi tài liệu",
+            "Nâng cao tính minh bạch, chính xác, tránh thất lạc hoặc nhầm lẫn tài liệu",
+            "Góp phần chuyển đổi số trong công tác chỉ đạo, điều hành, xây dựng môi trường làm việc hiện đại, linh hoạt",
+          ],
+          price: "Từ 30 triệu VNĐ",
+          image:
+            "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600",
+        },
+        {
+          id: 3,
+          name: "Địa chỉ số",
+          category: "Giải pháp hỗ trợ",
+          icon: "fa-brain",
+          description:
+            "Giải pháp số hóa công tác quản lý, tra cứu và sử dụng biển số nhà tại địa phương. Mỗi hộ gia đình được cấp mã QR riêng biệt gắn tại nhà, khi quét sẽ truy cập trang thông tin số hóa đa chức năng về hộ gia đình.",
+          features: [
+            "Quản lý hộ gia đình và nhân khẩu",
+            "Quản lý danh mục (phường xã, loại công trình, chính sách)",
+            "Quản lý sản phẩm và phòng nghỉ",
+            "Dashboard thống kê và tra cứu sự kiện",
+            "QR định danh hộ gia đình và biển gắn mã",
+            "Tích hợp Zalo OA, Facebook, dịch vụ công",
+          ],
+          benefits: [
+            "Số hóa toàn bộ hệ thống địa chỉ trên bản đồ số",
+            "Hỗ trợ quản lý hành chính, dân cư, kinh doanh minh bạch",
+            "Tăng hiệu quả phối hợp giữa các cơ quan (công an, y tế, du lịch)",
+            "Thúc đẩy phát triển kinh tế - du lịch địa phương",
+            "Nâng cao hình ảnh xã hiện đại, hướng tới chính quyền số",
+          ],
+          price: "Từ 60 triệu VNĐ",
+          image:
+            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600",
+        },
+        {
+          id: 4,
+          name: "Kiosk Hành chính công",
+          category: "Giải pháp hành chính",
+          icon: "fa-cloud",
+          description:
+            "Kios hỗ trợ công dân là thiết bị tích hợp phần mềm hướng dẫn, tra cứu và thao tác trực tiếp trên Cổng Dịch vụ công quốc gia hoặc Cổng Dịch vụ công của tỉnh, giúp người dân và cán bộ tại bộ phận 'một cửa' dễ dàng tiếp cận, thực hiện và theo dõi các thủ tục hành chính",
+          features: [
+            "Quản lý ứng dụng hiển thị",
+            "Lấy số thứ tự",
+            "Nộp hồ sơ trực tuyến",
+            "Định danh xác thực căn cước công dân và người nộp",
+            "Báo cáo hồ sơ đã nộp",
+            "Quản lý người dùng",
+          ],
+          benefits: [
+            "Kios hỗ trợ công dân là công cụ chuyển đổi số thiết thực tại cơ sở, giúp mọi người dân có thể tiếp cận và sử dụng dịch vụ công một cách dễ dàng, minh bạch và hiện đại, đồng thời nâng cao hiệu quả phục vụ và quản lý của chính quyền địa phương.",
+          ],
+          price: "Từ 230 triệu VNĐ",
+          image:
+            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600",
+        },
+        {
+          id: 5,
+          name: "Thiết bị tường lửa",
+          category: "Giải pháp bảo mật",
+          icon: "fa-users",
+          description:
+            "Giải pháp Tường lửa bảo mật VNPT là hệ thống bảo vệ mạng Internet của UBND xã khỏi các truy cập trái phép, virus và tấn công mạng. Giải pháp giúp kiểm soát lưu lượng truy cập, lọc nội dung độc hại, ngăn chặn mã độc và xâm nhập từ bên ngoài, đồng thời đảm bảo an toàn cho hệ thống máy tính, camera, và phần mềm điều hành của xã.",
+          features: [
+            "Bảo vệ khỏi truy cập trái phép và tấn công mạng",
+            "Lọc nội dung độc hại và mã độc",
+            "Kiểm soát lưu lượng truy cập Internet",
+            "Bảo vệ hệ thống thiết bị nội bộ (máy tính, camera)",
+            "Quản lý và giám sát tập trung bởi VNPT",
+            "Cảnh báo và ghi log sự kiện bảo mật",
+            "Dễ triển khai và vận hành ổn định",
+          ],
+          benefits: [
+            "Bảo vệ toàn diện hạ tầng mạng và dữ liệu điều hành",
+            "Ngăn ngừa tấn công mạng và giảm rủi ro mất ATTT",
+            "Phát hiện sớm hành vi bất thường qua cảnh báo",
+            "Đảm bảo hệ thống hoạt động ổn định 24/7",
+            "Phù hợp hạ tầng và quy mô cấp xã",
+            "Tuân thủ quy định an toàn thông tin của nhà nước",
+            "Hỗ trợ xây dựng Chính phủ điện tử an toàn",
+          ],
+          price: "Từ 80 triệu VNĐ",
+          image:
+            "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600",
+        },
+        {
+          id: 6,
+          name: "Smart IR",
+          category: "Giải pháp Bảo mật",
+          icon: "fa-shield-alt",
+          description:
+            "VNPT Smart IR (Smart Incident Response) là giải pháp phát hiện và ứng cứu sự cố điểm cuối toàn diện, giúp bảo vệ máy chủ, máy trạm, thiết bị đầu cuối khỏi virus, mã độc, tấn công mạng, đồng thời hỗ trợ điều tra nguyên nhân và xử lý khi sự cố xảy ra. Đây là nền tảng 'Make in Vietnam' với tỉ lệ nội địa hóa cao, đáp ứng yêu cầu bảo mật của các cơ quan nhà nước.",
+          features: [
+            "Phát hiện sự cố và mối đe dọa điểm cuối",
+            "Hỗ trợ ứng cứu và xử lý sự cố tự động",
+            "Điều tra nguyên nhân và phân tích hậu quả",
+            "Kiểm soát thiết bị đầu cuối theo chuẩn ATTT",
+            "Nền tảng 'Make in Vietnam' bảo mật cao",
+            "Báo cáo và cảnh báo tập trung",
+          ],
+          benefits: [
+            "Phát hiện sớm các sự cố, tấn công, mã độc trên máy chủ và thiết bị đầu cuối",
+            "Tự động ứng cứu, cô lập, xử lý sự cố nhằm giảm thiểu thiệt hại và ngăn lây lan",
+            "Điều tra, phân tích nguyên nhân và hậu quả, hỗ trợ báo cáo minh bạch",
+            "Kiểm soát thiết bị đầu cuối theo chuẩn ATTT, đảm bảo tuân thủ quy định nhà nước",
+            "Hệ thống báo cáo tập trung, giúp cán bộ kỹ thuật theo dõi tình hình bảo mật",
+            "Tăng cường năng lực phòng thủ ATTT, bảo vệ hạ tầng số trong chuyển đổi số",
+            "Giải pháp 'Make in Vietnam', đáp ứng tiêu chuẩn sử dụng trong cơ quan nhà nước",
+          ],
+          price: "Từ 8 triệu VNĐ",
+          image:
+            "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600",
+        },
+        {
+          id: 7,
+          name: "Hệ thống tin nhắn điều hành",
+          category: "Giải pháp hành chính",
+          icon: "fa-shield-alt",
+          description:
+            "Hệ thống tin nhắn điều hành cấp xã là giải pháp hỗ trợ UBND xã/phường truyền đạt nhanh chóng thông tin chỉ đạo đến cán bộ, lãnh đạo, đoàn thể thông qua tin nhắn SMS. Tin nhắn SMS có thể đính kèm liên kết văn bản (PDF, Word, ảnh…) giúp người nhận xem ngay nội dung chi tiết trên điện thoại.",
+          features: [
+            "Gửi tin nhắn SMS theo danh bạ",
+            "Gửi tin nhắn SMS theo file",
+            "Thống kê tin nhắn đã gửi",
+            "Quản lý danh bạ, đơn vị trực thuộc",
+            "Xem trạng thái tin nhắn",
+            "Lưu trữ các văn bản, thông báo trên hệ thống",
+          ],
+          benefits: [
+            "Truyền đạt nhanh chỉ đạo, thông báo của UBND xã đến cán bộ, lãnh đạo, đoàn thể qua SMS",
+            "Gửi tin nhắn hàng loạt, phân nhóm người nhận theo chức danh hoặc đơn vị",
+            "Đính kèm liên kết văn bản, ảnh, file PDF/Word, giúp người nhận xem ngay trên điện thoại",
+            "Thống kê, lưu trữ lịch sử gửi, theo dõi trạng thái tin nhắn, tránh bỏ sót thông tin",
+            "Giảm thời gian và chi phí điều hành, phù hợp với thông báo khẩn, mời họp, hoặc lịch công tác",
+            "Tăng hiệu quả chỉ đạo điều hành, hỗ trợ hiện đại hóa công tác hành chính cấp xã",
+          ],
+          price: "Từ 30 triệu VNĐ",
+          image:
+            "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600",
+        },
+        {
+          id: 8,
+          name: "Xếp lịch đơn vị",
+          category: "Giải pháp hành chính",
+          icon: "fa-shield-alt",
+          description:
+            "Hệ thống xây dựng phục vụ mục đích quản lý lịch làm việc của đơn vị, thường trực đơn vị hoặc các cán bộ trong đơn vị, liên thông lịch làm việc giữa các đơn vị với nhau. Liên thông lịch họp với phần mềm eCabinet hoặc phần mềm Hệ thống Quản lý tài liệu họp (họp không giấy).",
+          features: [
+            "Lịch làm việc cho thường trực, lãnh đạo đơn vị",
+            "Quản lý nhóm lịch",
+            "Quản lý lịch cá nhân",
+            "Liên thông lịch làm việc giữa các đơn vị",
+            "Tích hợp với hệ thống họp không giấy",
+            "Thông báo và nhắc nhở tự động",
+          ],
+          benefits: [
+            "Giải quyết bài toán quản lý lịch rời rạc, chồng chéo",
+            "Hình thành lịch làm việc điện tử thống nhất, liên thông và thông minh",
+            "Góp phần nâng cao hiệu quả điều hành",
+            "Chuyển đổi số trong hoạt động cơ quan",
+            "Tối ưu hóa thời gian và tài nguyên",
+            "Tăng tính minh bạch và phối hợp giữa các bộ phận",
+          ],
+          price: "Từ 5,5 triệu VNĐ",
+          image:
+            "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600",
+        },
+        {
+          id: 9,
+          name: "Xin ý kiến thành viên UB",
+          category: "Giải pháp hành chính",
+          icon: "fa-shield-alt",
+          description:
+            "Hệ thống quản lý phiếu xin ý kiến, thống kê, báo cáo ý kiến của các thành viên ủy ban một cách số hóa, giúp nâng cao hiệu quả ra quyết định tập thể và giảm thiểu việc sử dụng văn bản giấy.",
+          features: [
+            "Tạo và quản lý phiếu xin ý kiến điện tử",
+            "Gửi phiếu đến các thành viên ủy ban qua email/SMS",
+            "Thu thập và thống kê ý kiến tự động",
+            "Tạo báo cáo kết quả chi tiết theo từng vấn đề",
+            "Lưu trữ lịch sử các phiếu xin ý kiến theo nhiệm kỳ",
+            "Theo dõi tình trạng phản hồi của từng thành viên",
+          ],
+          benefits: [
+            "Giảm thời gian luân chuyển văn bản giấy",
+            "Nâng cao hiệu quả ra quyết định tập thể",
+            "Lưu trữ, tra cứu dễ dàng các ý kiến theo từng vấn đề, nhiệm kỳ",
+            "Thúc đẩy mô hình điều hành số – không giấy tờ trong cơ quan, tổ chức",
+            "Tăng tính minh bạch trong quá trình ra quyết định",
+            "Tiết kiệm chi phí in ấn và vận chuyển tài liệu",
+          ],
+          price: "Từ 12 triệu VNĐ",
+          image:
+            "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600",
+        },
+        {
+          id: 10,
+          name: "App tổ dân phố",
+          category: "Giải pháp hỗ trợ",
+          icon: "fa-shield-alt",
+          description:
+            "Ứng dụng Quản lý Khu phố là hệ thống phần mềm giúp chính quyền cấp xã – thôn – tổ dân phố quản lý thông tin hộ gia đình, triển khai văn bản, mời họp, thu thập ý kiến người dân và truyền thông tin, sự kiện đến cộng đồng. Giải pháp hướng tới số hóa công tác quản lý dân cư và điều hành ở cơ sở, tăng tương tác hai chiều giữa chính quyền và người dân, góp phần xây dựng chính quyền số, xã hội số tại địa phương.",
+          features: [
+            "Quản lý hộ gia đình",
+            "Quản lý lịch họp và mời họp",
+            "Triển khai văn bản chỉ đạo",
+            "Khảo sát ý kiến người dân",
+            "Tạo biểu mẫu khảo sát linh hoạt (trắc nghiệm, tự luận)",
+            "Gửi khảo sát tới hộ dân qua app hoặc Zalo OA",
+            "Theo dõi tiến độ trả lời, thống kê kết quả theo thôn/tổ",
+            "Thông báo tin tức – sự kiện",
+            "Cung cầu việc làm – mua bán",
+            "Thống kê – tổng hợp dữ liệu",
+          ],
+          benefits: [
+            "Quản lý tập trung, chính xác, minh bạch dân cư, hộ gia đình và các hoạt động thôn bản",
+            "Giảm thủ tục giấy tờ, tiết kiệm thời gian cho cả cán bộ và người dân",
+            "Tăng cường tương tác hai chiều giữa chính quyền và người dân thông qua thông báo, khảo sát, mời họp trực tuyến",
+            "Cung cấp dữ liệu tổng hợp, báo cáo nhanh, hỗ trợ lãnh đạo xã trong công tác chỉ đạo, điều hành",
+            "Góp phần xây dựng chính quyền số và xã thông minh, thúc đẩy chuyển đổi số toàn diện ở khu vực nông thôn",
+          ],
+          price: "Từ 180 triệu VNĐ",
+          image:
+            "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600",
+        },
+        {
+          id: 11,
+          name: "Du lịch tâm linh",
+          category: "Giải pháp du lịch",
+          icon: "fa-shield-alt",
+          description:
+            "Đây là ứng dụng di động cung cấp thông tin toàn diện về các điểm du lịch địa phương, đặc biệt tập trung vào các địa điểm tâm linh như đền, chùa. Ứng dụng tích hợp các tính năng quản lý đăng ký viết sớ, thuê thầy khấn, và đặt lễ online.",
+          features: [
+            "Quản lý địa điểm du lịch",
+            "Quản lý đăng ký sớ",
+            "Quản lý đăng ký thầy khấn",
+            "Quản lý đánh giá",
+            "Quản lý đặt lễ",
+            "Có App mobile",
+          ],
+          benefits: [
+            "Số hóa quy trình quản lý minh bạch, hiệu quả",
+            "Nâng cao trải nghiệm du khách với dịch vụ trực tuyến",
+            "Tạo dữ liệu du lịch thống nhất cho quy hoạch và báo cáo",
+            "Góp phần bảo tồn, phát huy giá trị văn hóa tâm linh bằng công nghệ",
+          ],
+          price: "Từ 300 triệu VNĐ",
+          image:
+            "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600",
+        },
+        {
+          id: 12,
+          name: "Thi trắc nghiệm trực tuyến",
+          category: "Giải pháp giáo dục",
+          icon: "fa-shield-alt",
+          description:
+            "Hệ thống thi trực tuyến đáp ứng nhu cầu tổ chức các cuộc thi trực tuyến trên mạng Internet. Cho phép đăng ký và thi ở bất cứ đâu có kết nối mạng, sử dụng dễ dàng và nhanh chóng.",
+          features: [
+            "Quản trị hệ thống: Quản lý cấu hình và người dùng",
+            "Quản lý thi: Xây dựng cuộc thi, cấu hình thông số, theo dõi tiến trình",
+            "Ngân hàng câu hỏi: Thiết lập và quản lý câu hỏi cho cuộc thi",
+            "Tham gia thi: Học viên theo dõi, đăng ký và tham gia cuộc thi",
+            "Thống kê báo cáo: Tổng hợp số lượng thí sinh, kết quả, xếp hạng",
+            "Dư luận xã hội: Tạo phiếu điều tra, quản lý cộng tác viên",
+          ],
+          benefits: [
+            "Chuyển đổi từ thi truyền thống sang trực tuyến",
+            "Tiết kiệm nguồn lực và tăng tính minh bạch",
+            "Dễ dàng thống kê và phân tích kết quả",
+            "Góp phần xây dựng chính quyền số và xã hội số cấp cơ sở",
+          ],
+          price: "1000 - 1.500 VNĐ/1 tài khoản",
+          image:
+            "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600",
+        },
+      ];
 
-        const blogPosts = [
-            {
-                id: 1,
-                title: "Xu hướng chuyển đổi số 2024",
-                excerpt: "Khám phá 5 xu hướng chuyển đổi số hàng đầu sẽ định hình tương lai doanh nghiệp trong năm 2024",
-                date: "15/11/2024",
-                author: "Nguyễn Minh Tuấn",
-                image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600",
-                category: "Chuyển đổi số"
-            },
-            {
-                id: 2,
-                title: "AI trong quản lý doanh nghiệp",
-                excerpt: "Cách ứng dụng trí tuệ nhân tạo để tối ưu hóa quy trình quản lý và ra quyết định",
-                date: "10/11/2024",
-                author: "Trần Thị Hương",
-                image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600",
-                category: "AI & Công nghệ"
-            },
-            {
-                id: 3,
-                title: "Bảo mật dữ liệu: Thách thức và giải pháp",
-                excerpt: "Những điều doanh nghiệp cần biết về bảo mật dữ liệu trong kỷ nguyên số",
-                date: "05/11/2024",
-                author: "Lê Văn Hùng",
-                image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600",
-                category: "Bảo mật"
-            }
-        ];
+      const blogPosts = [
+        {
+          id: 1,
+          title: "Bảo mật ATTT cấp 2 cho xã phường",
+          excerpt:
+            "Bộ công an kiểm tra hàng năm bảo mật ATTT, thiết bị, ... hàng năm theo chỉ đạo của TW đối với cấp xã",
+          date: "10/11/2015",
+          author: "Ẩn danh",
+          image:
+            "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600",
+          category: "Chuyển đổi số",
+        },
+        {
+          id: 2,
+          title:
+            "Nguy cơ bị xử phạt nếu dùng AI ngoại trong đơn vị chính quyền",
+          excerpt:
+            "AI như ChatGPT, Gemini, ... khi đưa văn bản lên sẽ bị xử phạt vì vi phạm đảm bảo ATTT chính phủ",
+          date: "1/7/2025",
+          author: "Ẩn danh",
+          image:
+            "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600",
+          category: "AI & Công nghệ",
+        },
+        {
+          id: 3,
+          title: "Bảo mật dữ liệu: Thách thức và giải pháp",
+          excerpt:
+            "Những điều doanh nghiệp và cơ quan nhà nước cần biết về bảo mật dữ liệu trong kỷ nguyên số",
+          date: "04/07/2025",
+          author: "Ẩn danh",
+          image:
+            "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600",
+          category: "Bảo mật",
+        },
+      ];
 
-        // Load Products
-        function loadProducts() {
-            const grid = document.getElementById('productsGrid');
-            grid.innerHTML = products.slice(0, 6).map(product => `
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale cursor-pointer product-card" data-id="${product.id}">
-                    <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover">
+      // Load Products
+      function loadProducts() {
+        const grid = document.getElementById("productsGrid");
+        grid.innerHTML = products
+          .map(
+            (product) => `
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale cursor-pointer product-card" data-id="${
+                  product.id
+                }">
+                    <img src="${product.image}" alt="${
+              product.name
+            }" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center mb-3">
-                            <i class="fas ${product.icon} text-2xl text-purple-600 mr-3"></i>
-                            <span class="text-sm text-purple-600 font-semibold">${product.category}</span>
+                            <i class="fas ${
+                              product.icon
+                            } text-2xl text-purple-600 mr-3"></i>
+                            <span class="text-sm text-purple-600 font-semibold">${
+                              product.category
+                            }</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">${product.name}</h3>
-                        <p class="text-gray-600 mb-4">${product.description}</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">${
+                          product.name
+                        }</h3>
+                        <p class="text-gray-600 mb-4">${
+                          product.description.length > 80
+                            ? product.description.slice(0, 80)
+                            : product.description
+                        }...</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-purple-600 font-bold text-lg">${product.price}</span>
                             <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition text-sm">
                                 Xem chi tiết <i class="fas fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
                 </div>
-            `).join('');
+            `
+          )
+          .join("");
 
-            // Add click events
-            document.querySelectorAll('.product-card').forEach(card => {
-                card.addEventListener('click', function() {
-                    const productId = parseInt(this.dataset.id);
-                    showProductDetail(productId);
-                });
-            });
-        }
+        // Add click events
+        document.querySelectorAll(".product-card").forEach((card) => {
+          card.addEventListener("click", function () {
+            const productId = parseInt(this.dataset.id);
+            showProductDetail(productId);
+          });
+        });
+      }
 
-        // Load Blog Posts
-        function loadBlog() {
-            const grid = document.getElementById('blogGrid');
-            grid.innerHTML = blogPosts.map(post => `
+      // Load Blog Posts
+      function loadBlog() {
+        const grid = document.getElementById("blogGrid");
+        grid.innerHTML = blogPosts
+          .map(
+            (post) => `
                 <article class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale cursor-pointer">
-                    <img src="${post.image}" alt="${post.title}" class="w-full h-48 object-cover">
+                    <img src="${post.image}" alt="${
+              post.title
+            }" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs bg-purple-100 text-purple-600 px-3 py-1 rounded-full font-semibold">${post.category}</span>
-                            <span class="text-sm text-gray-500"><i class="far fa-calendar mr-1"></i>${post.date}</span>
+                            <span class="text-xs bg-purple-100 text-purple-600 px-3 py-1 rounded-full font-semibold">${
+                              post.category
+                            }</span>
+                            <span class="text-sm text-gray-500"><i class="far fa-calendar mr-1"></i>${
+                              post.date
+                            }</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 hover:text-purple-600 transition">${post.title}</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 hover:text-purple-600 transition">${
+                          post.title
+                        }</h3>
                         <p class="text-gray-600 mb-4">${post.excerpt}</p>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center">
                                 <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-2">
                                     ${post.author.charAt(0)}
                                 </div>
-                                <span class="text-sm text-gray-600">${post.author}</span>
+                                <span class="text-sm text-gray-600">${
+                                  post.author
+                                }</span>
                             </div>
                             <a href="#" class="text-purple-600 font-semibold hover:text-purple-700 transition">
                                 Đọc thêm <i class="fas fa-arrow-right ml-1"></i>
@@ -489,26 +998,34 @@
                         </div>
                     </div>
                 </article>
-            `).join('');
-        }
+            `
+          )
+          .join("");
+      }
 
-        // Show Product Detail Modal
-        function showProductDetail(productId) {
-            const product = products.find(p => p.id === productId);
-            if (!product) return;
+      // Show Product Detail Modal
+      function showProductDetail(productId) {
+        const product = products.find((p) => p.id === productId);
+        if (!product) return;
 
-            const modal = document.getElementById('productModal');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalContent = document.getElementById('modalContent');
+        const modal = document.getElementById("productModal");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalContent = document.getElementById("modalContent");
 
-            modalTitle.textContent = product.name;
-            modalContent.innerHTML = `
-                <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover rounded-lg mb-6">
+        modalTitle.textContent = product.name;
+        modalContent.innerHTML = `
+                <img src="${product.image}" alt="${
+          product.name
+        }" class="w-full h-64 object-cover rounded-lg mb-6">
                 
                 <div class="mb-6">
                     <div class="flex items-center mb-4">
-                        <i class="fas ${product.icon} text-3xl text-purple-600 mr-3"></i>
-                        <span class="text-purple-600 font-semibold">${product.category}</span>
+                        <i class="fas ${
+                          product.icon
+                        } text-3xl text-purple-600 mr-3"></i>
+                        <span class="text-purple-600 font-semibold">${
+                          product.category
+                        }</span>
                     </div>
                     <p class="text-gray-700 text-lg">${product.description}</p>
                 </div>
@@ -518,12 +1035,16 @@
                         <i class="fas fa-star text-yellow-500 mr-2"></i>Tính năng chính
                     </h3>
                     <ul class="grid md:grid-cols-2 gap-3">
-                        ${product.features.map(feature => `
+                        ${product.features
+                          .map(
+                            (feature) => `
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
                                 <span class="text-gray-700">${feature}</span>
                             </li>
-                        `).join('')}
+                        `
+                          )
+                          .join("")}
                     </ul>
                 </div>
 
@@ -531,7 +1052,14 @@
                     <h3 class="text-xl font-bold text-gray-900 mb-3">
                         <i class="fas fa-chart-line text-purple-600 mr-2"></i>Lợi ích
                     </h3>
-                    <p class="text-gray-700 bg-green-50 p-4 rounded-lg border-l-4 border-green-500">${product.benefits}</p>
+                    <ul class="text-gray-700 bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                    ${product.benefits
+                      .map(
+                        (item) =>
+                          `<li class="text-base/6 leading-8 list-inside">- ${item}</li>`
+                      )
+                      .join("")}
+                    </ul>
                 </div>
 
                 <div class="mb-6">
@@ -548,111 +1076,216 @@
                 <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 rounded-lg text-white">
                     <div class="flex justify-between items-center">
                         <div>
-                            <h3 class="text-2xl font-bold mb-2">${product.price}</h3>
+                            <h3 class="text-2xl font-bold mb-2">${
+                              product.price
+                            }</h3>
                             <p class="text-purple-100">Bao gồm hỗ trợ và bảo hành 1 năm</p>
-                        </div>
-                        <div class="flex gap-3">
-                            <button class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-                                <i class="fas fa-play mr-2"></i>Xem Demo
-                            </button>
-                            <button class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition">
-                                <i class="fas fa-rocket mr-2"></i>Dùng thử
-                            </button>
                         </div>
                     </div>
                 </div>
             `;
 
-            modal.classList.remove('hidden');
+        modal.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function closeProductModal() {
+        const modal = document.getElementById("productModal");
+        modal.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+      }
+
+      // Mobile Menu Toggle
+      document
+        .getElementById("mobileMenuBtn")
+        .addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobileMenu");
+          mobileMenu.classList.toggle("hidden");
+        });
+
+      // Close Modal (button)
+      document
+        .getElementById("closeModal")
+        .addEventListener("click", function () {
+          closeProductModal();
+        });
+
+      // Close modal when clicking outside
+      document
+        .getElementById("productModal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            closeProductModal();
+          }
+        });
+      // Close modal on Escape
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          const modal = document.getElementById("productModal");
+          if (!modal.classList.contains("hidden")) {
+            closeProductModal();
+          }
         }
+      });
 
-        // Mobile Menu Toggle
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            mobileMenu.classList.toggle('hidden');
+      // Smooth Scroll
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            // Close mobile menu if open
+            document.getElementById("mobileMenu").classList.add("hidden");
+          }
         });
+      });
 
-        // Close Modal
-        document.getElementById('closeModal').addEventListener('click', function() {
-            document.getElementById('productModal').classList.add('hidden');
-        });
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        if (!form) return;
 
-        // Close modal when clicking outside
-        document.getElementById('productModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.classList.add('hidden');
-            }
-        });
+        const submitBtn = form.querySelector('button[type="submit"]');
 
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    // Close mobile menu if open
-                    document.getElementById('mobileMenu').classList.add('hidden');
-                }
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          // Honeypot check (nếu bot đã điền vào _gotcha thì dừng)
+          const gotcha = form.querySelector('[name="_gotcha"]');
+          if (gotcha && gotcha.value) {
+            // quietly ignore spam
+            return;
+          }
+
+          // Basic client-side validation (HTML5 will also run)
+          if (!form.checkValidity()) {
+            // Trigger native validation UI
+            form.reportValidity();
+            return;
+          }
+
+          // Prepare data
+          const formData = new FormData(form);
+
+          // Optional: set a nicer subject dynamically
+          // formData.set("_subject", "Yêu cầu từ website - " + (formData.get("name") || "Khách"));
+
+          // Disable button while sending
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = "Đang gửi...";
+            submitBtn.classList.add("opacity-75", "cursor-not-allowed");
+          }
+
+          // Determine endpoint: use form.action if present, otherwise fallback
+          const endpoint =
+            form.action || "https://formspree.io/f/xovyeadg";
+
+          try {
+            const response = await fetch(endpoint, {
+              method: "POST",
+              body: formData,
+              headers: {
+                Accept: "application/json", // ask Formspree for json response
+              },
             });
-        });
 
-        // Form Submit Handler
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi trong 24h.');
-            this.reset();
-        });
+            if (response.ok) {
+              // Nếu Formspree trả về JSON, có thể parse message nhưng thường không cần
+              // const data = await response.json();
 
-        // Active Navigation Highlight
-        function highlightActiveSection() {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            window.addEventListener('scroll', () => {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (scrollY >= (sectionTop - 100)) {
-                        current = section.getAttribute('id');
-                    }
-                });
+              // Hiển thị thông báo thành công (bạn có thể thay bằng modal/inline message)
+              alert(
+                "Cảm ơn bạn! Yêu cầu đã được gửi — chúng tôi sẽ phản hồi trong 24h."
+              );
 
-                navLinks.forEach(link => {
-                    link.classList.remove('text-purple-600', 'border-b-2', 'border-purple-600');
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.classList.add('text-purple-600', 'border-b-2', 'border-purple-600');
-                    }
-                });
-            });
-        }
+              // Reset form
+              form.reset();
 
-        // Scroll to Top Button
-        const scrollTopBtn = document.createElement('button');
-        scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-        scrollTopBtn.className = 'fixed bottom-8 right-8 bg-purple-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-purple-700 transition hidden z-40';
-        scrollTopBtn.id = 'scrollTopBtn';
-        document.body.appendChild(scrollTopBtn);
-
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.remove('hidden');
+              // Nếu bạn muốn redirect sau khi gửi:
+              // window.location.href = "https://yourdomain.com/thank-you.html";
             } else {
-                scrollTopBtn.classList.add('hidden');
+              // Nếu server trả lỗi, cố gắng đọc message để hiển thị
+              let errMsg = "Có lỗi khi gửi. Vui lòng thử lại sau.";
+              try {
+                const errData = await response.json();
+                if (errData && errData.error) errMsg = errData.error;
+              } catch (_) {}
+              alert(errMsg);
             }
+          } catch (err) {
+            console.error("Form submit error:", err);
+            alert("Không thể gửi yêu cầu. Kiểm tra kết nối mạng và thử lại.");
+          } finally {
+            // Re-enable button
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = submitBtn.originalText || "Gửi yêu cầu";
+              submitBtn.classList.remove("opacity-75", "cursor-not-allowed");
+            }
+          }
         });
+      });
 
-        scrollTopBtn.addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+      // Active Navigation Highlight
+      function highlightActiveSection() {
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".nav-link");
 
-        // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
-            loadProducts();
-            loadBlog();
-            highlightActiveSection();
+        window.addEventListener("scroll", () => {
+          let current = "";
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= sectionTop - 100) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove(
+              "text-purple-600",
+              "border-b-2",
+              "border-purple-600"
+            );
+            if (link.getAttribute("href") === `#${current}`) {
+              link.classList.add(
+                "text-purple-600",
+                "border-b-2",
+                "border-purple-600"
+              );
+            }
+          });
         });
+      }
+
+      // Scroll to Top Button
+      const scrollTopBtn = document.createElement("button");
+      scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+      scrollTopBtn.className =
+        "fixed bottom-8 right-8 bg-purple-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-purple-700 transition hidden z-40";
+      scrollTopBtn.id = "scrollTopBtn";
+      document.body.appendChild(scrollTopBtn);
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+          scrollTopBtn.classList.remove("hidden");
+        } else {
+          scrollTopBtn.classList.add("hidden");
+        }
+      });
+
+      scrollTopBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Initialize
+      document.addEventListener("DOMContentLoaded", function () {
+        loadProducts();
+        loadBlog();
+        highlightActiveSection();
+      });
     </script>
-</body>
+  </body>
 </html>
