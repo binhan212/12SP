@@ -1086,12 +1086,20 @@
                 </div>
             `;
 
+        // Ensure modal inner scroll is at top when opening
+        const innerScroll = modal.querySelector('.overflow-y-auto');
+        if (innerScroll) innerScroll.scrollTop = 0;
+
         modal.classList.remove("hidden");
         document.body.classList.add("overflow-hidden");
       }
 
       function closeProductModal() {
         const modal = document.getElementById("productModal");
+        // Reset modal inner scroll to top so next open starts at top
+        const innerScroll = modal.querySelector('.overflow-y-auto');
+        if (innerScroll) innerScroll.scrollTop = 0;
+
         modal.classList.add("hidden");
         document.body.classList.remove("overflow-hidden");
       }
